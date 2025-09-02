@@ -1,14 +1,42 @@
 a{                            /* ultimo */
-    text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
 .filme1 {                     /* a classe tem mais prioridade que o body*/
     color: blueviolet;
-    text-decoration: none;
+    
 }
 
 #filme1 {                     /* o id tem prioridade */
     color: crimson;
+    
+}
+
+ul > li > a {                        
     text-decoration: none;
+}
+
+section h2 {
+    color: #ff8a8a;
+}
+
+section p {
+    color:#ff8a8a;
+}
+
+section > article > p {
+    background-color:antiquewhite;
+    border: 5px solid #ff8a8a;
+    border-radius: 20px;
+    padding: 40px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 4px solid;
+    border-radius: 1000px;
+    color: antiquewhite;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

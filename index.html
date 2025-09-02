@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Atividade 1</title>
-    <style>
-
+    <style>                                
+                    /* CSS INTERNO */
         body{
             background-color: rgb(255, 207, 189);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
         }
 
         header {
-            background-color: rgb(255, 138, 138);
+            background-color: #ff8a8a;
             border-radius: 20px;
             text-align: center;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
+            width: 800px;
+            margin: 0 auto;
         }
 
         ul {
@@ -24,13 +27,17 @@
             padding: 0;
         }
 
+        img[alt] {                                               /*   testando seletor de atributo, colocando borda nos cartazes */
+            border: 5px solid #ff8a8a;
+        }
+
 
     </style>
 </head>
 <body>
     <header>
-        <h1 style="color: #ffcfbd; padding-top: 40px;">BEM VINDO A LOCADORA ONLINE</h1>
-        <h2 style="color: #ffcfbd;">Filmes disponíveis para aluguel:</h2>
+        <h1 style="color: #ffcfbd; padding-top: 40px;">BEM VINDO A LOCADORA ONLINE</h1> <!--CSS IN LINE-->
+        <h2 style="color: #ffcfbd;">Filmes disponíveis para aluguel:</h2>               <!--CSS IN LINE-->
         <ul>
             <li><a href="#superman" class="filme1" id="filme1">Superman</a></li>    <!-- primeiro vem o ID depois o CLASS e depois a TAG -->
             <li><a href="#nosferatu">Nosferatu</a></li>
@@ -62,8 +69,7 @@
     </section>
     <hr>
     <footer >
-        <p>Dev: jp</p>
-
+        <p style="font-weight: bold; color: #ff8a8a;">Dev: jp</p>
     </footer>
 </body>
 </html>
