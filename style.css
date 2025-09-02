@@ -1,0 +1,14 @@
+a{                            /* ultimo */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.filme1 {                     /* a classe tem mais prioridade que o body*/
+    color: blueviolet;
+    text-decoration: none;
+}
+
+#filme1 {                     /* o id tem prioridade */
+    color: crimson;
+    text-decoration: none;
+}
