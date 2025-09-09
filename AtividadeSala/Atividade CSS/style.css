@@ -1,3 +1,65 @@
-header {
-    background-color: blanchedalmond;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
+
+
+header {
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    padding: 12px;
+    display: flex;
+    border-radius: 1px;
+    border: 10px solid #020024;
+    position: relative;
+}
+
+ header > div {
+    border: 20px solid rgb(255, 255, 255);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+header > h1 {
+    background-color: rgb(255, 255, 255);
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin-left: 50px;
+}
+
+header > div > p {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 1px;
+    margin-top: 40px;
+    margin-left: 45px;
+    margin-right: 40px;
+    width: 100px;
+    height: 20px;
+}
+
+.navbar {
+    position: fixed;
+background: linear-gradient(179deg,rgba(2, 0, 36, 1) 0%, rgba(36, 36, 189, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    width: 200px;
+    height: 1000px;
+    padding-top: 20px;
+    color: white;
+    position: fixed;
+}
+
+.conteudo {
+    margin-left: 250px;
+    padding: 20px;
+    display: flex;
+}
+
+
+
+
