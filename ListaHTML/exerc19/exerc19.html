@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuulário</title>
+</head>
+<body>
+    <h1>
+        Crie um formulário HTML que tenha: <br>
+        ● Um campo de seleção (select) com três opções de cores <br>
+        ● Dois botões de opção (radio buttons) para escolher entre "Sim" e "Não".
+
+    </h1>
+
+    <form>
+        <h2>Preferências</h2>
+            <label for="cor-select">Escolha sua cor preferida:</label>
+            <select name="cor_preferida" id="cor-select">
+                <option value="">--Selecione uma opção--</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="vermelho">Vermelho</option>
+            </select>
+
+            <label>Realmente quer essa cor?</label>
+            
+            
+                <input type="radio" id="radio-sim" name="cor" value="sim" checked>
+                <label for="radio-sim">Sim</label>
+            
+                <input type="radio" id="radio-nao" name="cor" value="nao">
+                <label for="radio-nao">Não</label>
+            
+        <button type="submit">Enviar Preferências</button>
+    </form>
+</body>
+</html>
