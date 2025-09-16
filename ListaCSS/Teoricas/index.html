@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões Teoricas</title>
+</head>
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+    }
+
+
+    header{
+        display: flex;
+        background-color: rgb(40, 40, 155);
+        height: 150px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header > div > h1 {
+        color: rgb(255, 255, 255);
+        font-weight: 100;
+        border-bottom: 3px solid rgb(255, 255, 255);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    main{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    article{
+        margin-top: 10px;
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgb(71, 71, 175);
+        width: 900px;
+        border-radius: 10px;
+    }
+
+    section{
+        margin-top: 10px;
+    }
+
+    p{
+        font-size: 20px; 
+        padding: 10px; 
+        color:rgb(255, 255, 255);
+    }
+
+</style>
+<body>
+    <header>
+        <div>
+            <h1 style="padding: 20px; ;">Questões Teóricas CSS</h1>
+        </div>
+    </header>
+
+    <main>
+
+
+        <section>
+            <h1>1. O que é CSS?</h1>
+            <article>
+                <p>
+                É a linguagem que a gente usa pra deixar o site bonito.
+                O HTML monta o "esqueleto" da página, com os textos, títulos 
+                e imagens, e o CSS entra pra dar cor, arrumar o tamanho das coisas,
+                escolher a fonte e posicionar tudo no lugar certo. Sem CSS,
+                a web seria só um monte de texto preto num fundo branco.
+                </p>
+            </article>
+        </section>
+
+
+        <section>
+            <h1>2. Diferença entre CSS Inline, Interno e Externo </h1>
+            <article>
+                <p>CSS Inline: Os estilos são aplicados diretamente a um elemento HTML específico através do atributo style. Deve ser usado com moderação, apenas para aplicar um estilo único a um único elemento, sem a intenção de reutilização.</p>
+            </article>
+            <article>
+                <p>CSS Interno: O código CSS é inserido dentro da tag style no cabeçalho (head) do documento HTML. Ideal para quando uma única página precisa de estilos específicos que não serão compartilhados com outras páginas do site.</p>
+            </article>
+            <article>
+                <p>CSS Externo: Os estilos são definidos em um arquivo .css separado e vinculados ao HTML através da tag link no cabeçalho. É a abordagem mais comum e recomendada para a maioria dos projetos, pois permite a reutilização dos estilos em múltiplas páginas, facilitando a manutenção e a consistência do site.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>3. Seletores CSS</h1>
+            <article>
+                <p>São os "apelidos" que a gente usa pra dizer ao CSS qual elemento do HTML ele deve estilizar.</p>
+                <p>Elemento: Pega todas as tags daquele tipo. Ex: h1 { estilização } vai mudar todos os h1 da página.</p>
+                <p>ID: Usa o # e pega um elemento único que tem aquele id. Ex: #titulo-principal { estilização } só vai funcionar no elemento que tiver id="titulo-principal".</p>
+                <p>Classe: Usa o . e pode pegar vários elementos que têm a mesma classe. Ex: .botao { ... } vai estilizar todos os elementos que tiverem class="botao".</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>4. Diferença entre Classe e ID</h1>
+            <article>
+                <p>#id é como se fosse o RG de um elemento. Ele é único na página, só um elemento pode ter aquele ID. A gente usa pra coisas específicas, como o cabeçalho principal ou o rodapé.</p>
+                <p>.classe é como uma etiqueta. A gente pode colocar a mesma etiqueta em vários elementos que queremos que tenham o mesmo estilo (tipo, todos os botões de "comprar"). Um mesmo elemento também pode ter várias classes.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>5. Box Model</h1>
+            <article>
+                <p>É o jeito que o CSS enxerga todo elemento na tela: como uma caixa. Essa caixa tem 4 partes</p>
+                <p>Conteúdo: O texto ou a imagem em si.</p>
+                <p>Padding: Um espaçamento interno, tipo uma "borda fofinha" entre o conteúdo e a borda de verdade.</p>
+                <p>Borda: A linha que fica em volta do conteúdo e do padding.</p>
+                <p>Margem: Um espaçamento pra fora, que empurra os outros elementos pra longe.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>6. Propriedades de Texto</h1>
+            <article>
+                <p>Para mexer com texto, as principais são</p>
+                <p>Cor: color</p>
+                <p>Tamanho: font-size</p>
+                <p>Alinhamento: text-align</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>7. Flexbox</h1>
+            <article>
+                <p>Flexbox é um sistema de layout que salvou a vida de todo mundo, serve pra organizar e alinhar os itens dentro de um container. Antes dele, centralizar uma coisa na vertical era um pesadelo, com o flexbox a gente consegue alinhar, distribuir e organizar os elementos de um jeito muito mais fácil e flexível, principalmente quando eles estão um do lado do outro.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>8. Unidades de Medida</h1>
+            <article>
+                <p>Absolutas (px): px (pixel) é um tamanho fixo. 10px vai ser sempre 10px, não importa o resto. É fácil de usar, mas não é muito bom pra sites que precisam se adaptar a várias telas.</p>
+                <p>Relativas (em, rem, %):</p>
+                <p>% é a porcentagem do tamanho do elemento "pai".</p>
+                <p> é relativo ao tamanho da fonte do elemento "pai".></p>
+                <p>rem é o melhor, na minha opinião. Ele é relativo ao tamanho da fonte da raiz do site (html), então tudo fica proporcional e mais fácil de controlar.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>9. Pseudo-classes e Pseudo-elementos</h1>
+            <article>
+                <p>Pseudo-classe: Tem a ver com o estado de um elemento. O mais famoso é o :hover, que aplica um estilo quando o mouse passa por cima de algo. exemplo -> a:hover { color: green; }.</p>
+                <p>Pseudo-elemento: Pega uma parte específica de um elemento. Por exemplo, o ::first-letter pega só a primeira letra de um parágrafo pra gente deixar ela maior, estilo livro antigo. exemplo - p::first-letter { font-size: 2em; }.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>10. Media Quueries</h1>
+            <article>
+                <p>É a mágica por trás dos sites responsivos, aqueles que funcionam bem no celular e no computador, media query é basicamente uma regra "se": SE a tela do dispositivo tiver uma largura máxima de 600px, entao aplique estes estilos CSS. Com isso, a gente consegue mudar completamente o layout da página pra ela se encaixar perfeitamente em telas menores.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
