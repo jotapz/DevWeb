@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Lista JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Atividade Lista JavaScript</h1>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h3>Questões</h3>
+            <ul class="nav-list">
+                <li><a href="#questao1">1. O que é JavaScript?</a></li>
+                <li><a href="#questao2">2. var, let e const</a></li>
+                <li><a href="#questao3">3. Funções JS</a></li>
+                <li><a href="#questao4">4. DOM</a></li>
+                <li><a href="#questao5">5. Síncrono vs Assíncrono</a></li>
+                <li><a href="#questao6">6. Promises</a></li>
+                <li><a href="#questao7">7. async/await</a></li>
+                <li><a href="#questao8">8. for...in vs for...of</a></li>
+                <li><a href="#questao9">9. Desestruturação</a></li>
+                <li><a href="#questao10">10. Spread e Rest</a></li>
+                <li><a href="#questao11">11. Alterar Parágrafo</a></li>
+                <li><a href="#questao12">12. map()</a></li>
+                <li><a href="#questao13">13. filter()</a></li>
+                <li><a href="#questao14">14. reduce()</a></li>
+                <li><a href="#questao15">15. find()</a></li>
+                <li><a href="#questao16">16. forEach()</a></li>
+                <li><a href="#questao17">17. fetch() API</a></li>
+                <li><a href="#questao18">18. LocalStorage</a></li>
+                <li><a href="#questao19">19. Validação Formulário</a></li>
+                <li><a href="#questao20">20. Relógio Digital</a></li>
+            </ul>
+        </nav>
+
+
+        <main class="main-content">
+            
+            <!-- Questão 1 -->
+            <section id="questao1" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 1</span>
+                    <h2>O que é o JavaScript?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta: </h3>
+                    <p>JavaScript é uma linguagem de programação leve, interpretada e orientada a objetos, amplamente utilizada para criar páginas web interativas. Ela permite manipular o conteúdo HTML e CSS, responder a eventos do usuário, validar formulários, criar animações, entre outras funcionalidades. JavaScript é executado no lado do cliente (navegador) e também pode ser usado no lado do servidor com ambientes como Node.js.</p>
+                </div>
+            </section>
+
+            <section id="questao2" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 2</span>
+                    <h2>Qual a diferença entre var, let e const?</h2>
+                </div>
+                <div class="resposta">
+                    <h3> Resposta: </h3>
+                    <p>As principais diferenças entre var, let e const são:</p>
+                    <br>
+                    <ul>
+                        <li><strong>var</strong>: Tem escopo de função, ou seja, é visível em toda a função onde foi declarada. Pode ser redeclarada e atualizada. Sofre hoisting, o que significa que sua declaração é "elevada" ao topo do escopo.</li><br>
+                        <li><strong>let</strong>: Tem escopo de bloco, ou seja, é visível apenas dentro do bloco onde foi declarada (entre chaves {}). Pode ser atualizada, mas não redeclarada no mesmo escopo. Também sofre hoisting, mas não pode ser acessada antes da declaração (tem um "temporal dead zone").</li><br>
+                        <li><strong>const</strong>: Também tem escopo de bloco. Não pode ser redeclarada nem atualizada (o valor deve ser atribuído na declaração). No entanto, se o valor for um objeto ou array, suas propriedades ou elementos podem ser modificados. Sofre hoisting similar ao let.</li>
+                </div>
+            </section>
+
+            <section id="questao3" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 3</span>
+                    <h2>O que são funções em JavaScript?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta: </h3>
+                    <p>Funções em JavaScript são blocos de código reutilizáveis que executam uma tarefa específica. Elas podem receber parâmetros de entrada, realizar operações e retornar um valor. As funções ajudam a organizar o código, tornando-o mais modular e fácil de manter.</p>
+                </div>
+            </section>
+
+            <section id="questao4" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 4</span>
+                    <h2>O que é o DOM (Document Object Model)?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <p>O DOM (Document Object Model) é uma interface de programação para documentos HTML e XML. Ele representa a estrutura da página como uma árvore de objetos, onde cada nó é um elemento, atributo ou texto do documento. O DOM permite que linguagens de programação, como JavaScript, acessem e manipulem o conteúdo, estrutura e estilo da página web dinamicamente.</p>
+                </div>
+            </section>
+
+            <section id="questao5" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 5</span>
+                    <h2>Como funciona a execução síncrona e assíncrona no JavaScript?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <p>JavaScript é uma linguagem de programação single-threaded, o que significa que ele executa um comando por vez em uma única linha do tempo. A execução síncrona ocorre quando o código é executado linha por linha, bloqueando a execução até que a tarefa atual seja concluída. Isso pode levar a problemas de desempenho se uma tarefa demorar muito tempo para ser concluída, como uma requisição de rede ou uma operação de leitura/escrita em disco.</p>
+                </div>
+            </section>
+
+            <section id="questao6" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 6</span>
+                    <h2>O que são Promises e como elas são usadas?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <p>Promises são objetos que representam a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante. Elas permitem que você escreva código assíncrono de forma mais legível e gerenciável, evitando o "callback hell".</p>
+                </div>
+            </section>
+
+            <section id="questao7" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 7</span>
+                    <h2>Explique o uso de async e await em JavaScript</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <p>async e await são palavras-chave introduzidas no ES2017 que facilitam o trabalho com código assíncrono em JavaScript. A palavra-chave async é usada para declarar uma função assíncrona, que sempre retorna uma Promise. Dentro de uma função async, você pode usar a palavra-chave await antes de uma expressão que retorna uma Promise, fazendo com que a execução da função pause até que a Promise seja resolvida ou rejeitada. Isso permite escrever código assíncrono de forma mais linear e fácil de entender, semelhante ao código síncrono.</p>
+                </div>
+            </section>
+
+            <section id="questao8" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 8</span>
+                    <h2>Qual a diferença entre for...in e for...of?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta: </h3>
+                    <p>A principal diferença entre for...in e for...of em JavaScript está no tipo de dados que cada um itera e como eles funcionam:</p> <br>
+                    <ul>
+                        <li><strong>for...in</strong>: Itera sobre as propriedades enumeráveis de um objeto. Ele percorre as chaves (nomes das propriedades) do objeto, incluindo propriedades herdadas da cadeia de protótipos. É mais adequado para objetos, mas pode ser usado em arrays, embora não seja recomendado, pois a ordem das propriedades não é garantida.</li><br>
+                        <li><strong>for...of</strong>: Itera sobre valores iteráveis, como arrays, strings, mapas, conjuntos e outros objetos que implementam o protocolo iterável. Ele percorre os valores diretamente, mantendo a ordem dos elementos. É mais adequado para arrays e outros tipos de dados iteráveis.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="questao9" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 9</span>
+                    <h2>O que é desestruturação (destructuring) em JavaScript?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <p>Desestruturação é uma sintaxe em JavaScript que permite extrair valores de arrays ou propriedades de objetos e atribuí-los a variáveis de forma mais concisa e legível. Ela facilita o acesso a dados complexos, reduzindo a necessidade de múltiplas linhas de código para acessar cada valor individualmente.</p>
+                </div>
+            </section>
+
+            <section id="questao10" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 10</span>
+                    <h2>O que são os operadores spread e rest em JavaScript?</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <p>Os operadores spread (...) e rest (...) são dois usos diferentes do mesmo símbolo em JavaScript, mas com propósitos distintos:</p>
+                    <br>
+                    <ul>
+                        <li><strong>Operador Spread</strong>: O operador spread é usado para "espalhar" os elementos de um array ou as propriedades de um objeto em outro array ou objeto. Ele é útil para copiar arrays, combinar arrays, adicionar elementos a um array existente ou clonar objetos.</li><br>
+                        <li><strong>Operador Rest</strong>: O operador rest é usado para agrupar múltiplos elementos em um único array. Ele é frequentemente utilizado em funções para capturar um número variável de argumentos passados para a função, permitindo que você trabalhe com esses argumentos como um array.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="questao11" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 11</span>
+                    <h2>Alterar conteúdo de um parágrafo</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <div class="exemplo-pratico">
+                        <p id="meuParagrafo">Esse texto será alterado se voce apertar o botão :D</p>
+                        <button id="meuBotao">Alterar Texto</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="questao12" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 12</span>
+                    <h2>Método map() - multiplicar por 2</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                <div class="exemplo-pratico">
+                    <div id="arraymap"></div>
+                    <button id="botaoArray">Multiplicar por 2</button>
+                    <div id="arraymultiplicado"></div>
+                </div>
+                </div>
+            </section>
+
+
+            <section id="questao13" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 13</span>
+                    <h2>Método filter() - números maiores que 10</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <div class="exemplo-pratico">
+
+                        <div id="arrayfilter" class="exemplo-pratico"></div>
+
+                        <button id="botaoFilter">Filtrar números > 10</button>
+
+                        <div id="arrayfiltrado" class="exemplo-pratico"></div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="questao14" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 14</span>
+                    <h2>Método reduce() - somar array</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                    <div class="exemplo-pratico">
+                        <div id="arrayReduceOriginal" class="exemplo-pratico"></div>
+                        <button id="botaoReduce">Somar os números do array</button>
+                        <div id="arrayReduceSomado" class="exemplo-pratico"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="questao15" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 15</span>
+                    <h2>Método find() - buscar produto</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta; </h3>
+                    <div class="exemplo-pratico">
+                        <p>Lista de produtos:</p>
+                        <div id="arrayProdutos"></div>
+                        <button id="buscarProdutoBtn">Buscar produtos que são maiores que R$50,00</button>
+                        <div id="produtoEncontrado"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Questão 16 -->
+            <section id="questao16" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 16</span>
+                    <h2>Método forEach() - percorrer array</h2>
+                </div>
+                <div class="resposta">
+                    <h3>Resposta:</h3>
+                </div>
+            </section>
+
+            <!-- Questão 17 -->
+            <section id="questao17" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 17</span>
+                    <h2>Requisição fetch() - API externa</h2>
+                </div>
+                <div class="enunciado">
+                    <h3>📝 Enunciado</h3>
+                    <p>Desenvolva um código que faça uma requisição a uma API pública, como JSONPlaceholder, e mostre o nome de um usuário na página.</p>
+                </div>
+                <div class="resposta">
+                    <h3>💡 Resposta</h3>
+                    <div class="exemplo-pratico">
+                        <div id="usuario-info">Clique no botão para buscar usuário</div>
+                        <button id="buscar-usuario">Buscar Usuário</button>
+                    </div>
+                    <pre>// JavaScript - Versão com async/await
+async function buscarUsuario() {
+  const userDiv = document.getElementById('usuario-info');
+  
+  try {
+    userDiv.innerHTML = 'Carregando...';
+    
+    const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+    
+    if (!response.ok) {
+      throw new Error('Usuário não encontrado');
+    }
+    
+    const usuario = await response.json();
+    
+    userDiv.innerHTML = `
+      <div style="border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+        <h3>${usuario.name}</h3>
+        <p>📧 ${usuario.email}</p>
+        <p>📞 ${usuario.phone}</p>
+        <p>🌐 ${usuario.website}</p>
+        <p>🏢 ${usuario.company.name}</p>
+      </div>
+    `;
+  } catch (error) {
+    userDiv.innerHTML = `<p style="color: red;">❌ ${error.message}</p>`;
+  }
+}
+
+// Adicionar evento ao botão
+document.getElementById('buscar-usuario').addEventListener('click', buscarUsuario);</pre>
+                </div>
+            </section>
+
+            <!-- Questão 18 -->
+            <section id="questao18" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 18</span>
+                    <h2>LocalStorage - armazenar JSON</h2>
+                </div>
+                <div class="enunciado">
+                    <h3>📝 Enunciado</h3>
+                    <p>Escreva o código para salvar um objeto como uma string JSON no LocalStorage e depois recuperá-lo.</p>
+                </div>
+                <div class="resposta">
+                    <h3>💡 Resposta</h3>
+                    <pre>// Objeto exemplo
+const usuario = {
+  id: 1,
+  nome: 'João Silva',
+  email: 'joao@email.com',
+  idade: 30,
+  preferencias: {
+    tema: 'escuro',
+    idioma: 'pt-br'
+  },
+  interesses: ['programação', 'música', 'esportes']
+};
+
+// 1. SALVAR objeto no LocalStorage
+function salvarUsuario(dadosUsuario) {
+  try {
+    // Converter objeto para JSON string
+    const usuarioJSON = JSON.stringify(dadosUsuario);
+    
+    // Salvar no LocalStorage
+    localStorage.setItem('usuario', usuarioJSON);
+    
+    console.log('Usuário salvo com sucesso!');
+  } catch (error) {
+    console.error('Erro ao salvar usuário:', error);
+  }
+}
+
+// 2. RECUPERAR objeto do LocalStorage
+function recuperarUsuario() {
+  try {
+    // Buscar JSON string do LocalStorage
+    const usuarioJSON = localStorage.getItem('usuario');
+    
+    // Verificar se existe
+    if (usuarioJSON === null) {
+      console.log('Nenhum usuário encontrado no LocalStorage');
+      return null;
+    }
+    
+    // Converter JSON string de volta para objeto
+    const usuario = JSON.parse(usuarioJSON);
+    
+    console.log('Usuário recuperado:', usuario);
+    return usuario;
+  } catch (error) {
+    console.error('Erro ao recuperar usuário:', error);
+    return null;
+  }
+}
+
+// 3. ATUALIZAR dados no LocalStorage
+function atualizarUsuario(novosDados) {
+  const usuarioAtual = recuperarUsuario();
+  
+  if (usuarioAtual) {
+    // Mesclar dados existentes com novos dados
+    const usuarioAtualizado = { ...usuarioAtual, ...novosDados };
+    salvarUsuario(usuarioAtualizado);
+  }
+}
+
+// 4. REMOVER usuário do LocalStorage
+function removerUsuario() {
+  localStorage.removeItem('usuario');
+  console.log('Usuário removido do LocalStorage');
+}
+
+// Exemplos de uso:
+salvarUsuario(usuario);
+const usuarioRecuperado = recuperarUsuario();
+console.log('Nome:', usuarioRecuperado?.nome);</pre>
+                </div>
+            </section>
+
+            <!-- Questão 19 -->
+            <section id="questao19" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 19</span>
+                    <h2>Validação de Formulário</h2>
+                </div>
+                <div class="enunciado">
+                    <h3>📝 Enunciado</h3>
+                    <p>Crie um formulário HTML com um campo de nome e um botão de envio. Use JavaScript para exibir um alerta caso o campo esteja vazio.</p>
+                </div>
+                <div class="resposta">
+                    <h3>💡 Resposta</h3>
+                    <div class="exemplo-pratico">
+                        <form id="meuFormulario" class="form-exemplo">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu email">
+                            </div>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <pre>// JavaScript - Validação básica
+document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+  
+  const nome = document.getElementById('nome').value.trim();
+  const email = document.getElementById('email').value.trim();
+  
+  // Verificar se o nome está vazio
+  if (nome === '') {
+    alert('Por favor, preencha o campo Nome!');
+    document.getElementById('nome').focus();
+    return;
+  }
+  
+  // Verificar se o email está vazio
+  if (email === '') {
+    alert('Por favor, preencha o campo Email!');
+    document.getElementById('email').focus();
+    return;
+  }
+  
+  // Se chegou até aqui, formulário é válido
+  alert(`Formulário enviado com sucesso!\nNome: ${nome}\nEmail: ${email}`);
+});</pre>
+                </div>
+            </section>
+
+            <!-- Questão 20 -->
+            <section id="questao20" class="questao">
+                <div class="questao-header">
+                    <span class="questao-numero">Questão 20</span>
+                    <h2>Relógio Digital</h2>
+                </div>
+                <div class="enunciado">
+                    <h3>📝 Enunciado</h3>
+                    <p>Crie um relógio digital que exiba a hora atual atualizando a cada segundo usando setInterval().</p>
+                </div>
+                <div class="resposta">
+                    <h3>💡 Resposta</h3>
+                    <div class="exemplo-pratico">
+                        <div class="relogio-container">
+                            <div id="relogio" class="relogio">00:00:00</div>
+                            <div id="data" class="data">Carregando...</div>
+                            <div class="controles">
+                                <button id="pausar">Pausar</button>
+                                <button id="formato">12h/24h</button>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>// JavaScript - Relógio Digital
+let intervaloRelogio;
+let relogioPausado = false;
+let formato24h = true;
+
+// Função para atualizar o relógio
+function atualizarRelogio() {
+  const agora = new Date();
+  
+  let horas = agora.getHours();
+  let minutos = agora.getMinutes();
+  let segundos = agora.getSeconds();
+  let periodo = '';
+  
+  // Formato 12h ou 24h
+  if (!formato24h) {
+    periodo = horas >= 12 ? ' PM' : ' AM';
+    horas = horas % 12;
+    horas = horas ? horas : 12; // 0 vira 12
+  }
+  
+  // Adicionar zero à esquerda se necessário
+  horas = horas.toString().padStart(2, '0');
+  minutos = minutos.toString().padStart(2, '0');
+  segundos = segundos.toString().padStart(2, '0');
+  
+  // Atualizar display do relógio
+  const horaFormatada = `${horas}:${minutos}:${segundos}${periodo}`;
+  document.getElementById('relogio').textContent = horaFormatada;
+  
+  // Atualizar data
+  const diasSemana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+  
+  const diaSemana = diasSemana[agora.getDay()];
+  const dia = agora.getDate();
+  const mes = meses[agora.getMonth()];
+  const ano = agora.getFullYear();
+  
+  const dataFormatada = `${diaSemana}, ${dia} de ${mes} de ${ano}`;
+  document.getElementById('data').textContent = dataFormatada;
+}
+
+// Função para iniciar o relógio
+function iniciarRelogio() {
+  atualizarRelogio(); // Atualizar imediatamente
+  intervaloRelogio = setInterval(atualizarRelogio, 1000); // Atualizar a cada segundo
+}
+
+// Iniciar o relógio quando a página carregar
+iniciarRelogio();</pre>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
