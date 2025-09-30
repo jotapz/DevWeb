@@ -173,7 +173,6 @@
                     <h2>Alterar conteúdo de um parágrafo</h2>
                 </div>
                 <div class="resposta">
-                    <h3>Resposta:</h3>
                     <div class="exemplo-pratico">
                         <p id="meuParagrafo">Esse texto será alterado se voce apertar o botão :D</p>
                         <button id="meuBotao">Alterar Texto</button>
@@ -187,7 +186,6 @@
                     <h2>Método map() - multiplicar por 2</h2>
                 </div>
                 <div class="resposta">
-                    <h3>Resposta:</h3>
                 <div class="exemplo-pratico">
                     <div id="arraymap"></div>
                     <button id="botaoArray">Multiplicar por 2</button>
@@ -203,7 +201,6 @@
                     <h2>Método filter() - números maiores que 10</h2>
                 </div>
                 <div class="resposta">
-                    <h3>Resposta:</h3>
                     <div class="exemplo-pratico">
 
                         <div id="arrayfilter" class="exemplo-pratico"></div>
@@ -223,7 +220,6 @@
                     <h2>Método reduce() - somar array</h2>
                 </div>
                 <div class="resposta">
-                    <h3>Resposta:</h3>
                     <div class="exemplo-pratico">
                         <div id="arrayReduceOriginal" class="exemplo-pratico"></div>
                         <button id="botaoReduce">Somar os números do array</button>
@@ -238,7 +234,6 @@
                     <h2>Método find() - buscar produto</h2>
                 </div>
                 <div class="resposta">
-                    <h3>Resposta; </h3>
                     <div class="exemplo-pratico">
                         <p>Lista de produtos:</p>
                         <div id="arrayProdutos"></div>
@@ -248,14 +243,20 @@
                 </div>
             </section>
 
-            <!-- Questão 16 -->
             <section id="questao16" class="questao">
                 <div class="questao-header">
                     <span class="questao-numero">Questão 16</span>
                     <h2>Método forEach() - percorrer array</h2>
                 </div>
                 <div class="resposta">
-                    <h3>Resposta:</h3>
+                    <div class="exemplo-pratico">
+                        <p>Clique no botão para percorrer a lista de frutas</p>
+
+                        <button id="botaoForEach">Mostrar Frutas</button>
+
+                        <ul id="listaFrutas" class="array-container"></ul>
+
+                        <p class="consoleinst"><strong>Abra o console para ver a saida do console.log</strong></p>
                 </div>
             </section>
 
@@ -266,26 +267,38 @@
                     <h2>Requisição fetch() - API externa</h2>
                 </div>
                 <div class="resposta">
-                    <h3>💡 Resposta</h3>
                     <div class="exemplo-pratico">
-                        <div id="usuario-info">Clique no botão para buscar usuário</div>
+                        <p><strong>Cliqueo no botão para buscar dados do usuário 4</strong></p>
+
                         <button id="buscar-usuario">Buscar Usuário</button>
+
+                        <div id="user-info" class="info-container"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Questão 18 -->
             <section id="questao18" class="questao">
                 <div class="questao-header">
                     <span class="questao-numero">Questão 18</span>
                     <h2>LocalStorage - armazenar JSON</h2>
                 </div>
-                <div class="enunciado">
-                    <h3>📝 Enunciado</h3>
-                    <p>Escreva o código para salvar um objeto como uma string JSON no LocalStorage e depois recuperá-lo.</p>
-                </div>
                 <div class="resposta">
-                    <h3>Resposta: </h3>
+                    <div class="exemplo-pratico">
+
+                        <div class="input-nomes-geral">
+                            <label for="nomeInput">Digite um nome:</label>
+                            <input type="text" id="nomeInput" placeholder="Um nome aqui...">
+                        </div>
+
+                        <div class="botoes-nomes">
+                            <button id="salvar-botao">Salvar no storage</button>
+                            <button id="recuperar-botao">Recuperar do storage</button>
+                            <button id="limpar-botao">Limpar storage</button>
+                        </div>
+
+                        <div id="resultado-nomes" class="container-nomes"></div>
+
+                    </div>
                 </div>
             </section>
 
@@ -293,17 +306,13 @@
                 <div class="questao-header">
                     <span class="questao-numero">Questão 19</span>
                     <h2>Validação de Formulário</h2>
-                </div>
-                    <h3>Resposta: </h3>
+                <div class="resposta">
                     <div class="exemplo-pratico">
-                        <form id="meuFormulario" class="form-exemplo">
-                            <div class="form-group">
-                                <label for="nome">Nome Completo:</label>
-                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" placeholder="Digite seu email">
+                        <form id="meu-formulario">
+                            <div class="input-form">
+                                <label for="">Nome: </label>
+                                <input type="text" id="nome-form" placeholder="Digite seu nome">
+                                <span id="erro-form" class="mensagem-erro"></span>
                             </div>
                             <button type="submit">Enviar</button>
                         </form>
@@ -312,25 +321,18 @@
             </section>
 
             <section id="questao20" class="questao">
-                <div class="questao-header">
-                    <span class="questao-numero">Questão 20</span>
-                    <h2>Relógio Digital</h2>
-                </div>
-                <div class="resposta">
-                    <h3>Resposta: </h3>
-                    <div class="exemplo-pratico">
-                        <div class="relogio-container">
-                            <div id="relogio" class="relogio">00:00:00</div>
-                            <div id="data" class="data">Carregando...</div>
-                            <div class="controles">
-                                <button id="pausar">Pausar</button>
-                                <button id="formato">12h/24h</button>
-                            </div>
-                        </div>
+            <div class="questao-header">
+                <span class="questao-numero">Questão 20</span>
+                <h2>Criando um Relógio Digital</h2>
+            </div>
+             <div class="resposta">
+                 <div class="exemplo-pratico">
+                     <div id="relogio-digital" class="display-relogio-moderno">
+                            Carregando...
+                     </div>
                     </div>
                 </div>
             </section>
-
         </main>
     </div>
 

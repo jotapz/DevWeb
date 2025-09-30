@@ -95,6 +95,151 @@ buscarProdutoBtn.addEventListener('click', () => {
 });
 
 
+const frutas = ['Maçã', 'Banana', 'Laranja', 'Uva', 'Manga'];
+
+function exibirFrutasConsole(arrayDeItens) {
+    console.log('Frutas na lista:');
+
+    arrayDeItens.forEach(fruta => {
+        console.log(fruta);
+    })
+}
+
+const botaoForEach = document.getElementById('botaoForEach');
+const listaFrutas = document.getElementById('listaFrutas');
+
+botaoForEach;addEventListener('click', () => {
+    exibirFrutasConsole(frutas);
+
+    listaFrutas.innerHTML = '';
+
+    frutas.forEach(fruta => {
+        const itemDaLista = document.createElement('li');
+        itemDaLista.textContent = fruta;
+        listaFrutas.appendChild(itemDaLista);
+    });
+})
 
 
+const buscarUsuario = document.getElementById('buscar-usuario');
+const userInfo = document.getElementById('user-info');
+
+const apiUrl = 'https://jsonplaceholder.typicode.com/users/4';
+
+function buscarUsuarioApi() {
+    userInfo.textContent = 'Carregando...';
+    userInfo.className = 'info-container loading';
+
+    fetch(apiUrl)
+        .then(response => {
+            if(!response.ok) {
+                throw new Error(`Erro na requisição: ${response.status}`);
+            }  
+                return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            userInfo.textContent = `Nome do usuário: ${data.name}`;
+            userInfo.className = 'info-container success';
+        })
+        .catch(error => {
+            console.error('Erro ao buscar usuário:', error);
+            userInfo.textContent = `Erro ao buscar usuário: ${error.message}`;
+            userInfo.className = 'info-container error';
+        });
+    }
+
+    buscarUsuario.addEventListener('click', buscarUsuarioApi);
+
+
+
+    const nomeInput = document.getElementById('nomeInput');
+    const salvarNomeBtn = document.getElementById('salvar-botao');
+    const recuperarNomeBtn = document.getElementById('recuperar-botao');
+    const limparNomeBtn = document.getElementById('limpar-botao');
+    const resultadoDiv = document.getElementById('resultado-nomes');
+
+
+    const STORAGE_KEY = 'nomeUsuario';
+
+    salvarNomeBtn.addEventListener('click', () => {
+        const nomeDoUsuario = nomeInput.value;
+
+        if (!nomeDoUsuario) {
+            alert('Por favor, insira um nome antes de salvar.');
+            return;
+        }
+
+        const usuario = {
+            nome: nomeDoUsuario,
+            dataSalvo: new Date().toLocaleDateString('pt-BR')
+        }
+
+        const usuarioJson = JSON.stringify(usuario);
+
+        localStorage.setItem(STORAGE_KEY, usuarioJson);
+
+        resultadoDiv.textContent = `Nome salvo: "${usuario.nome}" salvo com sucesso!`;
+        nomeInput.value = '';
+    });
+    
+    recuperarNomeBtn.addEventListener('click', () => {
+        const usuarioStringRecuperado = localStorage.getItem(STORAGE_KEY);
+
+        if (usuarioStringRecuperado) {
+            const usuarioObjeto = JSON.parse(usuarioStringRecuperado);
+
+            resultadoDiv.textContent = `Nome recuperado: "${usuarioObjeto.nome}", salvo em ${usuarioObjeto.dataSalvo}.`;
+        } else {
+            resultadoDiv.textContent = 'Nenhum nome salvo no LocalStorage.';
+        }
+    })
+
+    limparNomeBtn.addEventListener('click', () => {
+        localStorage.removeItem(STORAGE_KEY);
+        resultadoDiv.textContent = 'Nome removido do LocalStorage.';
+    });
+
+
+
+    const meuFormulario = document.getElementById('meu-formulario');
+    const nomeForm = document.getElementById('nome-form');
+    const erroNomeSpan = document.getElementById('erro-form');
+
+    meuFormulario.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nomeValor = nomeForm.value.trim();
+
+        if (nomeValor == '') {
+            alert('O campo nome não pode estar vazio.');
+        } else {
+            erroNomeSpan.textContent = '';
+            alert(`Formulário enviado com sucesso! Nome: ${nomeValor}`);
+            console.log('Formulário válido enviado:', nomeValor);
+            meuFormulario.reset();
+        }
+    });
+
+
+
+
+    const displayRelogio = document.getElementById('relogio-digital');
+
+    function atualizarRelogio() {
+        const agora = new Date();
+
+        let horas = agora.getHours();
+        let minutos = agora.getMinutes();
+        let segundos = agora.getSeconds();
+
+        horas = horas < 10 ? '0' + horas : horas;
+        minutos = minutos < 10 ? '0' + minutos : minutos;
+        segundos = segundos < 10 ? '0' + segundos : segundos;
+
+        const horarioFormatado = `${horas}:${minutos}:${segundos}`;
+        displayRelogio.textContent = horarioFormatado;
+    }
+
+    setInterval(atualizarRelogio, 1000);
 
